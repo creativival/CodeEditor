@@ -272,7 +272,7 @@ struct UXCodeTextViewRepresentable : UXViewRepresentable {
       textView.autoresizingMask   = [ .flexibleWidth, .flexibleHeight ]
       textView.delegate           = context.coordinator
       textView.textContainerInset = edgeInsets
-      #if os(iOS)
+      #if os(iOS) || os(visionOS)
       textView.autocapitalizationType = .none
       textView.smartDashesType = .no
       textView.autocorrectionType = .no
